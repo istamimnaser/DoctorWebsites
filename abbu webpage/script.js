@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // --- 5. Number Counter Animation Logic ---
+    // --- 5. Number Counter Animation Logic (Medium Speed: 2000ms) ---
     const counters = document.querySelectorAll('.counter');
     const animationDuration = 2000; 
 
