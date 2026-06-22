@@ -1156,9 +1156,13 @@ body.sec-contact     .bg-section-glow { background: radial-gradient(ellipse 70% 
     }
 
     section { padding: 80px 5% 50px; }
-    .section-title { font-size: 2rem; }
-    .hero h1 { font-size: 2.4rem; }
+    .section-title { font-size: 1.75rem; }
+    .hero h1 { font-size: 1.75rem; letter-spacing: -0.5px; }
     .hero { padding-top: 80px; }
+    .badge { font-size: 0.64rem; padding: 6px 13px; }
+    .degrees { font-size: 0.92rem; }
+    .degrees.text-muted { font-size: 0.82rem !important; }
+    .bio-short { font-size: 0.88rem; }
 
     .services-grid { grid-template-columns: 1fr; }
     .carousel-slide { height: 240px; }
@@ -1177,18 +1181,29 @@ body.sec-contact     .bg-section-glow { background: radial-gradient(ellipse 70% 
 }
 
 @media (max-width: 480px) {
-    .hero h1 { font-size: 2rem; letter-spacing: -0.5px; }
-    .section-title { font-size: 1.75rem; }
-    .badge { font-size: 0.68rem; letter-spacing: 1.2px; padding: 7px 14px; }
-    .degrees { font-size: 1rem; }
-    .bio-short { font-size: 0.97rem; }
-    .stat-item h3 { font-size: 2.6rem; }
-    .text-large { font-size: 2.4rem; }
+    .hero h1 { font-size: 1.55rem; letter-spacing: -0.5px; }
+    .section-title { font-size: 1.45rem; }
+    .badge { font-size: 0.6rem; letter-spacing: 0.9px; padding: 6px 11px; }
+    .degrees { font-size: 0.84rem; }
+    .degrees.text-muted { font-size: 0.76rem !important; margin-top: -4px !important; }
+    .bio-short { font-size: 0.83rem; line-height: 1.62; }
+    .stat-item h3 { font-size: 2.2rem; }
+    .text-large { font-size: 2rem; }
     .social-buttons { flex-direction: column; align-items: stretch; }
-    .btn { justify-content: center; text-align: center; }
+    .btn { justify-content: center; text-align: center; font-size: 0.88rem; padding: 11px 20px; }
     nav { padding: 0 4%; }
-    .logo-text strong { font-size: 0.95rem; }
-    .logo-text span { font-size: 0.7rem; }
+    .logo-text strong { font-size: 0.92rem; }
+    .logo-text span { font-size: 0.68rem; }
     .logo-icon { width: 36px; height: 36px; font-size: 1.1rem; }
     footer { padding: 40px 5%; }
+}
+
+@media (max-width: 380px) {
+    .hero h1 { font-size: 1.4rem; }
+    .section-title { font-size: 1.35rem; }
+    .badge { font-size: 0.58rem; padding: 5px 10px; letter-spacing: 0.7px; }
+    .degrees { font-size: 0.78rem; }
+    .degrees.text-muted { font-size: 0.7rem !important; }
+    .bio-short { font-size: 0.8rem; }
+    .degrees-container { margin-bottom: 12px; }
 }
