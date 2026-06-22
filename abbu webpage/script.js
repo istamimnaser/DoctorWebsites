@@ -179,4 +179,58 @@ document.addEventListener("DOMContentLoaded", () => {
         counterObserver.observe(counter);
     });
 
+    // --- 6. Section-aware background colour shift ---
+    document.body.classList.add('sec-home');
+
+    const bgObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                document.body.className = document.body.className
+                    .replace(/\bsec-\w+/g, '').trim();
+                document.body.classList.add('sec-' + entry.target.id);
+            }
+        });
+    }, { threshold: 0.25, rootMargin: '-8% 0px -8% 0px' });
+
+    document.querySelectorAll('section[id], header[id]').forEach(s => bgObserver.observe(s));
+
+});
+
+// --- 8. Scroll-reactive background ---
+(function () {
+    let ticking = false;
+    let resetTimer;
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                const scrollY   = window.scrollY;
+                const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+                const progress  = Math.min(scrollY / maxScroll, 1);
+
+                // Drive progress bar width and ECG vertical parallax via CSS variables
+                document.documentElement.style.setProperty('--scroll-p',      progress.toFixed(4));
+                document.documentElement.style.setProperty('--scroll-offset', (scrollY * 0.012).toFixed(1) + 'px');
+
+                // Brightness boost while actively scrolling, revert 220ms after scroll stops
+                document.body.classList.add('is-scrolling');
+                clearTimeout(resetTimer);
+                resetTimer = setTimeout(() => document.body.classList.remove('is-scrolling'), 220);
+
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+}());
+
+// --- 7. Loading screen — dismiss after fonts & images settle ---
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const loader = document.getElementById('loading-screen');
+        if (loader) {
+            loader.classList.add('hidden');
+            setTimeout(() => loader.remove(), 1050);
+        }
+    }, 2000);
 });

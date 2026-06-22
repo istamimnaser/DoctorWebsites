@@ -10,6 +10,87 @@
 </head>
 <body>
 
+    <!-- Scroll progress bar (width driven by --scroll-p CSS var) -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Loading screen -->
+    <div id="loading-screen" role="status" aria-label="Loading">
+        <div class="loader-icon"><i class="fa-solid fa-user-doctor"></i></div>
+        <p class="loader-name">Prof. Md. Fazal Naser</p>
+        <p class="loader-title">Urologist</p>
+        <!-- Self-drawing ECG line (3 PQRST beats across 260px) -->
+        <svg class="loader-ecg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 50" aria-hidden="true">
+            <path class="loader-ecg-path" d="M0,25 L42,25 C46,25 49,20 52,17 C55,20 58,25 62,25 L66,30 L70,2 L74,48 L78,25 L92,25 C96,25 99,17 103,12 C107,17 110,25 114,25 L156,25 C160,25 163,20 166,17 C169,20 172,25 176,25 L180,30 L184,2 L188,48 L192,25 L206,25 C210,25 213,17 217,12 C221,17 224,25 228,25 L260,25"/>
+        </svg>
+    </div>
+
+    <!-- Medical-themed background animation -->
+    <div class="medical-bg" aria-hidden="true">
+
+        <!-- Section-aware colour glow (controlled via body class from JS) -->
+        <div class="bg-section-glow"></div>
+
+        <!-- Medical cross / plus particles -->
+        <span class="med-p" style="--x:3%;  --d:0s;   --t:22s; --s:0.65rem;"></span>
+        <span class="med-p" style="--x:9%;  --d:4.5s; --t:28s; --s:1.1rem;"></span>
+        <span class="med-p" style="--x:15%; --d:1.2s; --t:20s; --s:0.8rem;"></span>
+        <span class="med-p" style="--x:22%; --d:7s;   --t:25s; --s:1.4rem;"></span>
+        <span class="med-p" style="--x:29%; --d:2.5s; --t:30s; --s:0.7rem;"></span>
+        <span class="med-p" style="--x:37%; --d:9s;   --t:18s; --s:1rem;"></span>
+        <span class="med-p" style="--x:44%; --d:5.5s; --t:24s; --s:1.2rem;"></span>
+        <span class="med-p" style="--x:51%; --d:11s;  --t:26s; --s:0.75rem;"></span>
+        <span class="med-p" style="--x:58%; --d:3s;   --t:21s; --s:0.9rem;"></span>
+        <span class="med-p" style="--x:65%; --d:8s;   --t:27s; --s:1.3rem;"></span>
+        <span class="med-p" style="--x:72%; --d:1.8s; --t:23s; --s:0.6rem;"></span>
+        <span class="med-p" style="--x:79%; --d:6.5s; --t:19s; --s:1.1rem;"></span>
+        <span class="med-p" style="--x:86%; --d:10s;  --t:29s; --s:0.8rem;"></span>
+        <span class="med-p" style="--x:92%; --d:0.7s; --t:22s; --s:0.7rem;"></span>
+        <span class="med-p" style="--x:97%; --d:13s;  --t:25s; --s:1rem;"></span>
+
+        <!-- Kidney bean shapes (inline SVG, outline-only) -->
+        <span class="med-uro" style="--x:7%;  --d:6s;  --t:27s; --s:1.7rem;"><svg xmlns="http://www.w3.org/2000/svg" width="0.78em" height="1em" viewBox="0 0 50 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M24,4 C38,4 46,15 46,32 C46,52 38,64 24,64 C15,64 8,57 5,47 C3,38 6,33 6,28 C6,23 3,16 6,10 C10,5 17,4 24,4Z"/></svg></span>
+        <span class="med-uro" style="--x:26%; --d:14s; --t:23s; --s:1.4rem;"><svg xmlns="http://www.w3.org/2000/svg" width="0.78em" height="1em" viewBox="0 0 50 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M24,4 C38,4 46,15 46,32 C46,52 38,64 24,64 C15,64 8,57 5,47 C3,38 6,33 6,28 C6,23 3,16 6,10 C10,5 17,4 24,4Z"/></svg></span>
+        <span class="med-uro" style="--x:48%; --d:2s;  --t:29s; --s:1.9rem;"><svg xmlns="http://www.w3.org/2000/svg" width="0.78em" height="1em" viewBox="0 0 50 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M24,4 C38,4 46,15 46,32 C46,52 38,64 24,64 C15,64 8,57 5,47 C3,38 6,33 6,28 C6,23 3,16 6,10 C10,5 17,4 24,4Z"/></svg></span>
+        <span class="med-uro" style="--x:70%; --d:9s;  --t:24s; --s:1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="0.78em" height="1em" viewBox="0 0 50 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M24,4 C38,4 46,15 46,32 C46,52 38,64 24,64 C15,64 8,57 5,47 C3,38 6,33 6,28 C6,23 3,16 6,10 C10,5 17,4 24,4Z"/></svg></span>
+        <span class="med-uro" style="--x:89%; --d:17s; --t:26s; --s:1.3rem;"><svg xmlns="http://www.w3.org/2000/svg" width="0.78em" height="1em" viewBox="0 0 50 68" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M24,4 C38,4 46,15 46,32 C46,52 38,64 24,64 C15,64 8,57 5,47 C3,38 6,33 6,28 C6,23 3,16 6,10 C10,5 17,4 24,4Z"/></svg></span>
+
+        <!-- Water droplets (urinary tract theme) -->
+        <span class="med-uro" style="--x:13%; --d:8s;  --t:21s; --s:1.1rem;"><i class="fa-solid fa-droplet"></i></span>
+        <span class="med-uro" style="--x:33%; --d:1s;  --t:25s; --s:0.9rem;"><i class="fa-solid fa-droplet"></i></span>
+        <span class="med-uro" style="--x:55%; --d:17s; --t:19s; --s:1.3rem;"><i class="fa-solid fa-droplet"></i></span>
+        <span class="med-uro" style="--x:76%; --d:4s;  --t:23s; --s:0.8rem;"><i class="fa-solid fa-droplet"></i></span>
+        <span class="med-uro" style="--x:95%; --d:11s; --t:27s; --s:1rem;">  <i class="fa-solid fa-droplet"></i></span>
+
+        <!-- DNA helices (cellular/genetic theme) -->
+        <span class="med-uro" style="--x:19%; --d:7s;  --t:28s; --s:1rem;">  <i class="fa-solid fa-dna"></i></span>
+        <span class="med-uro" style="--x:40%; --d:3.5s;--t:22s; --s:1.2rem;"><i class="fa-solid fa-dna"></i></span>
+        <span class="med-uro" style="--x:62%; --d:13s; --t:26s; --s:0.9rem;"><i class="fa-solid fa-dna"></i></span>
+        <span class="med-uro" style="--x:83%; --d:0.5s;--t:24s; --s:1.1rem;"><i class="fa-solid fa-dna"></i></span>
+
+        <!-- Floating cell membrane rings (double-ring = cell with nucleus) -->
+        <span class="med-cell" style="--x:5%;  --d:5s;  --t:22s; --s:28px;"></span>
+        <span class="med-cell" style="--x:24%; --d:10s; --t:18s; --s:20px;"></span>
+        <span class="med-cell" style="--x:46%; --d:1.5s;--t:26s; --s:36px;"></span>
+        <span class="med-cell" style="--x:68%; --d:14s; --t:20s; --s:24px;"></span>
+        <span class="med-cell" style="--x:87%; --d:7s;  --t:24s; --s:32px;"></span>
+
+        <!-- ECG heartbeat line — 8 seamlessly tiling PQRST cycles -->
+        <div class="ecg-wrapper">
+            <svg class="ecg-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
+                <path class="ecg-path" vector-effect="non-scaling-stroke" d="
+                    M0,40 L80,40 C85,40 88,30 90,30 C92,30 95,40 100,40 L107,47 L111,5 L116,72 L122,40 L142,40 C147,40 155,20 162,20 C169,20 177,40 180,40 L300,40
+                    C385,40 388,30 390,30 C392,30 395,40 400,40 L407,47 L411,5 L416,72 L422,40 L442,40 C447,40 455,20 462,20 C469,20 477,40 480,40 L600,40
+                    C685,40 688,30 690,30 C692,30 695,40 700,40 L707,47 L711,5 L716,72 L722,40 L742,40 C747,40 755,20 762,20 C769,20 777,40 780,40 L900,40
+                    C985,40 988,30 990,30 C992,30 995,40 1000,40 L1007,47 L1011,5 L1016,72 L1022,40 L1042,40 C1047,40 1055,20 1062,20 C1069,20 1077,40 1080,40 L1200,40
+                    C1285,40 1288,30 1290,30 C1292,30 1295,40 1300,40 L1307,47 L1311,5 L1316,72 L1322,40 L1342,40 C1347,40 1355,20 1362,20 C1369,20 1377,40 1380,40 L1500,40
+                    C1585,40 1588,30 1590,30 C1592,30 1595,40 1600,40 L1607,47 L1611,5 L1616,72 L1622,40 L1642,40 C1647,40 1655,20 1662,20 C1669,20 1677,40 1680,40 L1800,40
+                    C1885,40 1888,30 1890,30 C1892,30 1895,40 1900,40 L1907,47 L1911,5 L1916,72 L1922,40 L1942,40 C1947,40 1955,20 1962,20 C1969,20 1977,40 1980,40 L2100,40
+                    C2185,40 2188,30 2190,30 C2192,30 2195,40 2200,40 L2207,47 L2211,5 L2216,72 L2222,40 L2242,40 C2247,40 2255,20 2262,20 C2269,20 2277,40 2280,40 L2400,40
+                "/>
+            </svg>
+        </div>
+    </div>
+
     <nav>
         <div class="logo">
             <div class="logo-icon"><i class="fa-solid fa-user-doctor"></i></div>
@@ -361,6 +442,11 @@
     <footer>
         <p>&copy; 2026 Prof. Md. Fazal Naser. All rights reserved.</p>
     </footer>
+
+    <!-- Floating WhatsApp appointment button -->
+    <a href="https://wa.me/8801409967330" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Book appointment on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
