@@ -872,8 +872,8 @@ footer::before {
     100% { opacity: 0;    transform: translateY(-108vh)  rotate(160deg); }
 }
 
-/* ECG / heartbeat scrolling strip */
-.ecg-wrapper {
+/* Kidney outline scrolling strip */
+.kidney-strip-wrapper {
     position: absolute;
     bottom: calc(16% + var(--scroll-offset, 0px));
     left: 0;
@@ -883,17 +883,17 @@ footer::before {
     transition: bottom 0.5s ease;
 }
 
-.ecg-svg {
+.kidney-strip-svg {
     display: block;
     width: 200%;
     height: 100%;
-    animation: ecgScroll 14s linear infinite;
+    animation: kidneyStripScroll 14s linear infinite;
 }
 
-.ecg-path {
+.kidney-strip-path {
     fill: none;
     stroke: var(--accent-green);
-    stroke-width: 2;
+    stroke-width: 3;
     stroke-linecap: round;
     stroke-linejoin: round;
     opacity: 0.18;
@@ -901,7 +901,7 @@ footer::before {
     transition: opacity 0.4s ease;
 }
 
-@keyframes ecgScroll {
+@keyframes kidneyStripScroll {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
 }
@@ -920,7 +920,7 @@ footer::before {
     will-change: width;
 }
 
-/* ---- Scroll-reactive particle & ECG brightness ---- */
+/* ---- Scroll-reactive particle & kidney-strip brightness ---- */
 .med-p, .med-uro, .med-cell {
     transition: filter 0.35s ease;
 }
@@ -931,7 +931,7 @@ body.is-scrolling .med-cell {
     filter: brightness(2.2);
 }
 
-body.is-scrolling .ecg-path {
+body.is-scrolling .kidney-strip-path {
     opacity: 0.32;
 }
 
@@ -1062,26 +1062,26 @@ body.sec-contact     .bg-section-glow { background: radial-gradient(ellipse 70% 
     opacity: 0.6;
 }
 
-.loader-ecg {
+.loader-kidney {
     margin-top: 34px;
-    width: 260px;
-    height: 50px;
+    width: 70px;
+    height: 95px;
     opacity: 0;
     animation: loaderFadeUp 0.6s ease 0.7s forwards;
 }
 
-.loader-ecg-path {
+.loader-kidney-path {
     fill: none;
     stroke: var(--accent-green);
-    stroke-width: 2;
+    stroke-width: 2.5;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: drawECGLine 1.5s ease 0.9s forwards;
+    stroke-dasharray: 180;
+    stroke-dashoffset: 180;
+    animation: drawKidneyLine 1.5s ease 0.9s forwards;
 }
 
-@keyframes drawECGLine {
+@keyframes drawKidneyLine {
     to { stroke-dashoffset: 0; }
 }
 

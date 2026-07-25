@@ -18,9 +18,9 @@
         <div class="loader-icon"><i class="fa-solid fa-user-doctor"></i></div>
         <p class="loader-name">Prof. Md. Fazal Naser</p>
         <p class="loader-title">Urologist</p>
-        <!-- Self-drawing ECG line (3 PQRST beats across 260px) -->
-        <svg class="loader-ecg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 50" aria-hidden="true">
-            <path class="loader-ecg-path" d="M0,25 L42,25 C46,25 49,20 52,17 C55,20 58,25 62,25 L66,30 L70,2 L74,48 L78,25 L92,25 C96,25 99,17 103,12 C107,17 110,25 114,25 L156,25 C160,25 163,20 166,17 C169,20 172,25 176,25 L180,30 L184,2 L188,48 L192,25 L206,25 C210,25 213,17 217,12 C221,17 224,25 228,25 L260,25"/>
+        <!-- Self-drawing kidney outline -->
+        <svg class="loader-kidney" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 68" aria-hidden="true">
+            <path class="loader-kidney-path" d="M24,4 C38,4 46,15 46,32 C46,52 38,64 24,64 C15,64 8,57 5,47 C3,38 6,33 6,28 C6,23 3,16 6,10 C10,5 17,4 24,4Z"/>
         </svg>
     </div>
 
@@ -74,19 +74,20 @@
         <span class="med-cell" style="--x:68%; --d:14s; --t:20s; --s:24px;"></span>
         <span class="med-cell" style="--x:87%; --d:7s;  --t:24s; --s:32px;"></span>
 
-        <!-- ECG heartbeat line — 8 seamlessly tiling PQRST cycles -->
-        <div class="ecg-wrapper">
-            <svg class="ecg-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
-                <path class="ecg-path" vector-effect="non-scaling-stroke" d="
-                    M0,40 L80,40 C85,40 88,30 90,30 C92,30 95,40 100,40 L107,47 L111,5 L116,72 L122,40 L142,40 C147,40 155,20 162,20 C169,20 177,40 180,40 L300,40
-                    C385,40 388,30 390,30 C392,30 395,40 400,40 L407,47 L411,5 L416,72 L422,40 L442,40 C447,40 455,20 462,20 C469,20 477,40 480,40 L600,40
-                    C685,40 688,30 690,30 C692,30 695,40 700,40 L707,47 L711,5 L716,72 L722,40 L742,40 C747,40 755,20 762,20 C769,20 777,40 780,40 L900,40
-                    C985,40 988,30 990,30 C992,30 995,40 1000,40 L1007,47 L1011,5 L1016,72 L1022,40 L1042,40 C1047,40 1055,20 1062,20 C1069,20 1077,40 1080,40 L1200,40
-                    C1285,40 1288,30 1290,30 C1292,30 1295,40 1300,40 L1307,47 L1311,5 L1316,72 L1322,40 L1342,40 C1347,40 1355,20 1362,20 C1369,20 1377,40 1380,40 L1500,40
-                    C1585,40 1588,30 1590,30 C1592,30 1595,40 1600,40 L1607,47 L1611,5 L1616,72 L1622,40 L1642,40 C1647,40 1655,20 1662,20 C1669,20 1677,40 1680,40 L1800,40
-                    C1885,40 1888,30 1890,30 C1892,30 1895,40 1900,40 L1907,47 L1911,5 L1916,72 L1922,40 L1942,40 C1947,40 1955,20 1962,20 C1969,20 1977,40 1980,40 L2100,40
-                    C2185,40 2188,30 2190,30 C2192,30 2195,40 2200,40 L2207,47 L2211,5 L2216,72 L2222,40 L2242,40 C2247,40 2255,20 2262,20 C2269,20 2277,40 2280,40 L2400,40
-                "/>
+        <!-- Kidney outline strip — 8 seamlessly tiling kidney silhouettes -->
+        <div class="kidney-strip-wrapper">
+            <svg class="kidney-strip-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
+                <defs>
+                    <path id="kidneyShape" d="M24,4 C38,4 46,15 46,32 C46,52 38,64 24,64 C15,64 8,57 5,47 C3,38 6,33 6,28 C6,23 3,16 6,10 C10,5 17,4 24,4Z"/>
+                </defs>
+                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(10,6) scale(0.9)"/>
+                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(310,6) scale(0.9)"/>
+                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(610,6) scale(0.9)"/>
+                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(910,6) scale(0.9)"/>
+                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(1210,6) scale(0.9)"/>
+                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(1510,6) scale(0.9)"/>
+                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(1810,6) scale(0.9)"/>
+                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(2110,6) scale(0.9)"/>
             </svg>
         </div>
     </div>

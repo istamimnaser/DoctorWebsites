@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
                 const progress  = Math.min(scrollY / maxScroll, 1);
 
-                // Drive progress bar width and ECG vertical parallax via CSS variables
+                // Drive progress bar width and kidney-strip vertical parallax via CSS variables
                 document.documentElement.style.setProperty('--scroll-p',      progress.toFixed(4));
                 document.documentElement.style.setProperty('--scroll-offset', (scrollY * 0.012).toFixed(1) + 'px');
 
