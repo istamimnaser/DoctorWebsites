@@ -1,3 +1,47 @@
+// --- Language switch (EN / BN) — applied immediately so a saved Bangla
+// preference renders on first paint instead of flashing English first ---
+(function () {
+    function applyLanguage(lang) {
+        const dict = translations[lang] || translations.en;
+
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const val = dict[el.getAttribute('data-i18n')];
+            if (val !== undefined) el.innerHTML = val;
+        });
+
+        document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+            const val = dict[el.getAttribute('data-i18n-alt')];
+            if (val !== undefined) el.setAttribute('alt', val);
+        });
+
+        document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+            const val = dict[el.getAttribute('data-i18n-aria')];
+            if (val !== undefined) el.setAttribute('aria-label', val);
+        });
+
+        if (dict['meta.title']) document.title = dict['meta.title'];
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+    }
+
+    function setLanguage(lang) {
+        applyLanguage(lang);
+        localStorage.setItem('site-lang', lang);
+    }
+
+    window.setSiteLanguage = setLanguage;
+
+    applyLanguage(localStorage.getItem('site-lang') || 'en');
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+    });
+}());
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // --- 0. Mobile Hamburger Menu Logic ---

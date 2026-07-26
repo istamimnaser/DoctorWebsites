@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prof. Md. Fazal Naser | Urologist</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -16,8 +16,8 @@
     <!-- Loading screen -->
     <div id="loading-screen" role="status" aria-label="Loading">
         <div class="loader-icon"><i class="fa-solid fa-user-doctor"></i></div>
-        <p class="loader-name">Prof. Md. Fazal Naser</p>
-        <p class="loader-title">Urologist</p>
+        <p class="loader-name" data-i18n="brand.name">Prof. Md. Fazal Naser</p>
+        <p class="loader-title" data-i18n="brand.title">Urologist</p>
         <!-- Self-drawing kidney outline -->
         <svg class="loader-kidney" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 68" aria-hidden="true">
             <path class="loader-kidney-path" d="M24,4 C38,4 46,15 46,32 C46,52 38,64 24,64 C15,64 8,57 5,47 C3,38 6,33 6,28 C6,23 3,16 6,10 C10,5 17,4 24,4Z"/>
@@ -96,56 +96,60 @@
         <div class="logo">
             <div class="logo-icon"><i class="fa-solid fa-user-doctor"></i></div>
             <div class="logo-text">
-                <strong>Prof. Md. Fazal Naser</strong>
-                <span>Urologist</span>
+                <strong data-i18n="brand.name">Prof. Md. Fazal Naser</strong>
+                <span data-i18n="brand.title">Urologist</span>
             </div>
         </div>
         <div class="menu-toggle" id="mobile-menu">
             <i class="fa-solid fa-bars"></i>
         </div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#recognition">Recognition</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#research" data-i18n="nav.research">Research</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#recognition" data-i18n="nav.recognition">Recognition</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
-        <a href="#contact" class="btn btn-primary nav-cta"><i class="fa-solid fa-calendar-check"></i> Book Appointment</a>
+        <a href="#contact" class="btn btn-primary nav-cta"><i class="fa-solid fa-calendar-check"></i> <span data-i18n="nav.cta">Book Appointment</span></a>
+        <div class="lang-toggle" role="group" aria-label="Language switch">
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="bn">বাং</button>
+        </div>
     </nav>
 
     <header id="home" class="hero section-animate">
         <div class="hero-content">
             <div class="text-reveal-1">
-                <div class="badge">Professor of Urology & Transplant Surgeon</div>
+                <div class="badge" data-i18n="hero.badge">Professor of Urology &amp; Transplant Surgeon</div>
             </div>
-            
-            <h1 class="text-reveal-2">Precision in <span class="text-green text-breathe">Urology</span>.<br>Compassion in <span class="text-green text-breathe">Care</span>.</h1>
-            
+
+            <h1 class="text-reveal-2"><span data-i18n="hero.titleLine1">Precision in</span> <span class="text-green text-breathe" data-i18n="hero.titleUrology">Urology</span>.<br><span data-i18n="hero.titleLine2">Compassion in</span> <span class="text-green text-breathe" data-i18n="hero.titleCare">Care</span>.</h1>
+
             <div class="degrees-container text-reveal-3">
                 <p class="degrees">MBBS (DMC), FCPS (Surgery), MS (Urology)</p>
                 <p class="degrees text-muted" style="font-size: 1rem; margin-top: -10px;">FRCS (Glasgow), MRCS (Edin), FACS (USA)</p>
             </div>
 
-            <p class="bio-short mt-10 text-reveal-4">
+            <p class="bio-short mt-10 text-reveal-4" data-i18n="hero.bio">
                 One of the most prominent Bangladeshi Urologists. Advanced Laparoscopy, Endourological Surgeon & Andrologist. His core value is to provide the best tech-savvy Urology Care with minimal cost.
             </p>
-            
+
             <div class="social-buttons text-reveal-5">
-                <a href="#contact" class="btn btn-primary pulse-anim"><i class="fa-solid fa-calendar-check"></i> Book Appointment</a>
-                <a href="#services" class="btn btn-outline">View Services <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#contact" class="btn btn-primary pulse-anim"><i class="fa-solid fa-calendar-check"></i> <span data-i18n="nav.cta">Book Appointment</span></a>
+                <a href="#services" class="btn btn-outline"><span data-i18n="hero.viewServices">View Services</span> <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
-        
+
         <div class="hero-image text-reveal-3">
             <div class="image-wrapper float-anim">
-                <img src="image_8ecde5.jpg" alt="Prof. Md. Fazal Naser">
+                <img src="image_8ecde5.jpg" alt="Prof. Md. Fazal Naser" data-i18n-alt="brand.name">
                 <div class="hero-badge">
                     <div class="hero-badge-icon"><i class="fa-solid fa-award"></i></div>
                     <div>
                         <div class="hero-badge-num"><span class="counter" data-target="22">0</span>+</div>
-                        <div class="hero-badge-label">Years of Experience</div>
+                        <div class="hero-badge-label" data-i18n="hero.badgeYears">Years of Experience</div>
                     </div>
                 </div>
             </div>
@@ -154,31 +158,31 @@
 
     <section id="about" class="section-animate">
         <div class="section-header">
-            <h4 class="accent-text">ABOUT DR. NASER</h4>
-            <h2 class="section-title">Dedication to Patient Care</h2>
+            <h4 class="accent-text" data-i18n="about.eyebrow">ABOUT DR. NASER</h4>
+            <h2 class="section-title" data-i18n="about.title">Dedication to Patient Care</h2>
         </div>
         <div class="about-grid">
             <div class="card">
-                <p>Prof. Md. Fazal Naser qualified from Dhaka Medical College, The Royal College of Surgeons of Edinburgh, Bangladesh Medical University (BMU), and The Bangladesh College of Physicians & Surgeons.</p>
-                <p class="mt-10">Besides his national and international degrees in General Surgery and Urology, he has worked at world-famous Urology Centers globally, including the highly prestigious Mulji Bhai Patel Urological Hospital in India.</p>
-                
+                <p data-i18n="about.p1">Prof. Md. Fazal Naser qualified from Dhaka Medical College, The Royal College of Surgeons of Edinburgh, Bangladesh Medical University (BMU), and The Bangladesh College of Physicians & Surgeons.</p>
+                <p class="mt-10" data-i18n="about.p2">Besides his national and international degrees in General Surgery and Urology, he has worked at world-famous Urology Centers globally, including the highly prestigious Mulji Bhai Patel Urological Hospital in India.</p>
+
                 <ul class="credentials-list mt-30">
-                    <li><i class="fa-solid fa-award text-green float-anim" style="animation-delay: 0s;"></i> <strong>WHO Fellow:</strong> Urology & Renal Transplant</li>
-                    <li><i class="fa-solid fa-microscope text-green float-anim" style="animation-delay: 0.5s;"></i> <strong>Sub-specialties:</strong> Laparoscopy, Endourology & Andrology</li>
-                    <li><i class="fa-solid fa-globe text-green float-anim" style="animation-delay: 1s;"></i> <strong>Global Training:</strong> Extensive surgical background in the UK & India</li>
-                    <li><i class="fa-solid fa-microphone-lines text-green float-anim" style="animation-delay: 1.5s;"></i> <strong>Global Speaker:</strong> Invited lectures in countries like the UK, India, USA, Canada, & Singapore</li>
+                    <li><i class="fa-solid fa-award text-green float-anim" style="animation-delay: 0s;"></i> <span data-i18n="about.cred1"><strong>WHO Fellow:</strong> Urology & Renal Transplant</span></li>
+                    <li><i class="fa-solid fa-microscope text-green float-anim" style="animation-delay: 0.5s;"></i> <span data-i18n="about.cred2"><strong>Sub-specialties:</strong> Laparoscopy, Endourology & Andrology</span></li>
+                    <li><i class="fa-solid fa-globe text-green float-anim" style="animation-delay: 1s;"></i> <span data-i18n="about.cred3"><strong>Global Training:</strong> Extensive surgical background in the UK & India</span></li>
+                    <li><i class="fa-solid fa-microphone-lines text-green float-anim" style="animation-delay: 1.5s;"></i> <span data-i18n="about.cred4"><strong>Global Speaker:</strong> Invited lectures in countries like the UK, India, USA, Canada, & Singapore</span></li>
                 </ul>
             </div>
-            
+
             <!-- UPDATED: Animated counters added here -->
             <div class="stats-container card border-green">
                 <div class="stat-item">
                     <h3><span class="counter" data-target="22">0</span>+</h3>
-                    <p>Years Experience</p>
+                    <p data-i18n="about.statYears">Years Experience</p>
                 </div>
                 <div class="stat-item">
                     <h3><span class="counter" data-target="3000">0</span>+</h3>
-                    <p>Surgeries</p>
+                    <p data-i18n="about.statSurgeries">Surgeries</p>
                 </div>
             </div>
         </div>
@@ -186,72 +190,72 @@
 
     <section id="experience" class="section-animate section-tint">
         <div class="section-header">
-            <h4 class="accent-text">PROFESSIONAL JOURNEY</h4>
-            <h2 class="section-title">Experience</h2>
+            <h4 class="accent-text" data-i18n="experience.eyebrow">PROFESSIONAL JOURNEY</h4>
+            <h2 class="section-title" data-i18n="experience.title">Experience</h2>
         </div>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
-                    <h3 class="text-green">Professor of Urology</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;">National Institute of Kidney Diseases & Urology (NIKDU)</p>
-                    <p class="text-muted text-small">21 Feb 2021 - Present</p>
+                    <h3 class="text-green" data-i18n="exp.role1">Professor of Urology</h3>
+                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org1">National Institute of Kidney Diseases & Urology (NIKDU)</p>
+                    <p class="text-muted text-small" data-i18n="exp.date1">21 Feb 2021 - Present</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
-                    <h3 class="text-green">Associate Professor</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;">Shaheed Suhrawardy Medical College</p>
-                    <p class="text-muted text-small">2017 - 2021</p>
+                    <h3 class="text-green" data-i18n="exp.role2">Associate Professor</h3>
+                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org2">Shaheed Suhrawardy Medical College</p>
+                    <p class="text-muted text-small" data-i18n="exp.date2">2017 - 2021</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
-                    <h3 class="text-green">Assistant Professor</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;">Shaheed Suhrawardy Medical College</p>
-                    <p class="text-muted text-small">2011 - 2017</p>
+                    <h3 class="text-green" data-i18n="exp.role3">Assistant Professor</h3>
+                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org3">Shaheed Suhrawardy Medical College</p>
+                    <p class="text-muted text-small" data-i18n="exp.date3">2011 - 2017</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
-                    <h3 class="text-green">WHO Fellow</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;">India</p>
-                    <p class="text-muted text-small">2013</p>
+                    <h3 class="text-green" data-i18n="exp.role4">WHO Fellow</h3>
+                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org4">India</p>
+                    <p class="text-muted text-small" data-i18n="exp.date4">2013</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
-                    <h3 class="text-green">Speciality Registrar, Urology</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;">National Health Services (NHS), UK</p>
-                    <p class="text-muted text-small">2012 - 2013</p>
+                    <h3 class="text-green" data-i18n="exp.role5">Speciality Registrar, Urology</h3>
+                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org5">National Health Services (NHS), UK</p>
+                    <p class="text-muted text-small" data-i18n="exp.date5">2012 - 2013</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
-                    <h3 class="text-green">Medical Officer</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;">Various Institutions</p>
-                    <p class="text-muted text-small">2008 - 2011</p>
+                    <h3 class="text-green" data-i18n="exp.role6">Medical Officer</h3>
+                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org6">Various Institutions</p>
+                    <p class="text-muted text-small" data-i18n="exp.date6">2008 - 2011</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
-                    <h3 class="text-green">Medical Officer</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;">Mitford Hospital</p>
-                    <p class="text-muted text-small">2007</p>
+                    <h3 class="text-green" data-i18n="exp.role7">Medical Officer</h3>
+                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org7">Mitford Hospital</p>
+                    <p class="text-muted text-small" data-i18n="exp.date7">2007</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
-                    <h3 class="text-green">Resident</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;">Bangladesh Medical University (BMU)</p>
-                    <p class="text-muted text-small">2003 - 2006</p>
+                    <h3 class="text-green" data-i18n="exp.role8">Resident</h3>
+                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org8">Bangladesh Medical University (BMU)</p>
+                    <p class="text-muted text-small" data-i18n="exp.date8">2003 - 2006</p>
                 </div>
             </div>
         </div>
@@ -259,37 +263,37 @@
 
     <section id="research" class="section-animate">
         <div class="section-header">
-            <h4 class="accent-text">ACADEMIA</h4>
-            <h2 class="section-title">Research & Publications</h2>
-            <p class="section-subtitle">Contributing to the global advancement of urological science.</p>
+            <h4 class="accent-text" data-i18n="research.eyebrow">ACADEMIA</h4>
+            <h2 class="section-title" data-i18n="research.title">Research & Publications</h2>
+            <p class="section-subtitle" data-i18n="research.subtitle">Contributing to the global advancement of urological science.</p>
         </div>
         <div class="services-grid">
             <div class="card text-center float-anim" style="animation-delay: 0s;">
                 <h2 class="text-green text-large"><span class="counter" data-target="50">0</span> +</h2>
-                <p>Journal Articles</p>
+                <p data-i18n="research.stat1">Journal Articles</p>
             </div>
             <div class="card text-center float-anim" style="animation-delay: 0.3s;">
                 <h2 class="text-green text-large"><span class="counter" data-target="40">0</span> +</h2>
-                <p>International Conferences</p>
+                <p data-i18n="research.stat2">International Conferences</p>
             </div>
             <div class="card text-center float-anim" style="animation-delay: 0.6s;">
                 <h2 class="text-green text-large"><span class="counter" data-target="2">0</span></h2>
-                <p>Books Published</p>
+                <p data-i18n="research.stat3">Books Published</p>
             </div>
         </div>
     </section>
 
     <section id="services" class="section-animate section-tint">
         <div class="section-header">
-            <h4 class="accent-text">EXPERTISE</h4>
-            <h2 class="section-title">Special Interests & Services</h2>
-            <p class="section-subtitle">Providing high-end, minimally invasive urological solutions.</p>
+            <h4 class="accent-text" data-i18n="services.eyebrow">EXPERTISE</h4>
+            <h2 class="section-title" data-i18n="services.title">Special Interests & Services</h2>
+            <p class="section-subtitle" data-i18n="services.subtitle">Providing high-end, minimally invasive urological solutions.</p>
         </div>
-        
+
         <div class="pediatric-wrapper card border-green mb-50">
             <div class="text-center mb-30">
-                <h3 class="text-green">Pediatric Urology</h3>
-                <p class="text-muted">Dedicated care for congenital conditions in children, including hypospadias, epispadias, and posterior urethral valves.</p>
+                <h3 class="text-green" data-i18n="services.pedTitle">Pediatric Urology</h3>
+                <p class="text-muted" data-i18n="services.pedDesc">Dedicated care for congenital conditions in children, including hypospadias, epispadias, and posterior urethral valves.</p>
             </div>
             <div class="carousel-container">
                 <div class="carousel-track" id="carouselTrack">
@@ -307,79 +311,79 @@
         <div class="services-grid">
             <div class="service-card card">
                 <div class="icon-circle float-anim"><i class="fa-solid fa-laptop-medical"></i></div>
-                <h3>Retroperitoneoscopic Uro-Surgery</h3>
-                <p>Pioneered and established successful retroperitoneoscopic urological surgery in Bangladesh, offering high-tech care at decent costs.</p>
+                <h3 data-i18n="services.s1Title">Retroperitoneoscopic Uro-Surgery</h3>
+                <p data-i18n="services.s1Desc">Pioneered and established successful retroperitoneoscopic urological surgery in Bangladesh, offering high-tech care at decent costs.</p>
             </div>
             <div class="service-card card">
                 <div class="icon-circle float-anim" style="animation-delay: 0.2s;"><i class="fa-solid fa-microscope"></i></div>
-                <h3>Uro-Oncology</h3>
-                <p>Comprehensive, precise surgical management of cancers of the kidney, bladder, and prostate using modern techniques.</p>
+                <h3 data-i18n="services.s2Title">Uro-Oncology</h3>
+                <p data-i18n="services.s2Desc">Comprehensive, precise surgical management of cancers of the kidney, bladder, and prostate using modern techniques.</p>
             </div>
             <div class="service-card card">
                 <div class="icon-circle float-anim" style="animation-delay: 0.4s;"><i class="fa-solid fa-user-doctor"></i></div>
-                <h3>Endo Urology & Laparoscopy</h3>
-                <p>Minimally invasive approaches for stone management and complex reconstructive procedures, ensuring faster recovery.</p>
+                <h3 data-i18n="services.s3Title">Endo Urology & Laparoscopy</h3>
+                <p data-i18n="services.s3Desc">Minimally invasive approaches for stone management and complex reconstructive procedures, ensuring faster recovery.</p>
             </div>
-            
+
             <div class="service-card card">
                 <div class="icon-circle float-anim"><i class="fa-solid fa-bolt"></i></div>
-                <h3>Advanced Laser & Stone Management</h3>
-                <p>Comprehensive solutions for kidney and urethral stones using advanced laser technology such as PCNL, RIRS, and flexible URS.</p>
+                <h3 data-i18n="services.s4Title">Advanced Laser & Stone Management</h3>
+                <p data-i18n="services.s4Desc">Comprehensive solutions for kidney and urethral stones using advanced laser technology such as PCNL, RIRS, and flexible URS.</p>
             </div>
 
             <div class="service-card card">
                 <div class="icon-circle float-anim" style="animation-delay: 0.2s;"><i class="fa-solid fa-suitcase-medical"></i></div>
-                <h3>Reconstructive & Complex Urology</h3>
-                <p>Expertise in complex surgical procedures, including urethroplasty, partial/radical nephrectomy, and management of congenital anomalies like PUJ obstruction.</p>
+                <h3 data-i18n="services.s5Title">Reconstructive & Complex Urology</h3>
+                <p data-i18n="services.s5Desc">Expertise in complex surgical procedures, including urethroplasty, partial/radical nephrectomy, and management of congenital anomalies like PUJ obstruction.</p>
             </div>
 
             <div class="service-card card">
                 <div class="icon-circle float-anim" style="animation-delay: 0.4s;"><i class="fa-solid fa-notes-medical"></i></div>
-                <h3>Functional Urology & Urodynamics</h3>
-                <p>Specialized assessment and treatment for voiding dysfunction and stress urinary incontinence, utilizing urodynamic studies and modern slings.</p>
+                <h3 data-i18n="services.s6Title">Functional Urology & Urodynamics</h3>
+                <p data-i18n="services.s6Desc">Specialized assessment and treatment for voiding dysfunction and stress urinary incontinence, utilizing urodynamic studies and modern slings.</p>
             </div>
 
             <div class="service-card card">
                 <div class="icon-circle float-anim"><i class="fa-solid fa-mars"></i></div>
-                <h3>Andrology</h3>
-                <p>Specialized diagnosis and treatment of male reproductive health issues, providing compassionate and confidential care.</p>
+                <h3 data-i18n="services.s7Title">Andrology</h3>
+                <p data-i18n="services.s7Desc">Specialized diagnosis and treatment of male reproductive health issues, providing compassionate and confidential care.</p>
             </div>
             <div class="service-card card">
                 <div class="icon-circle float-anim" style="animation-delay: 0.2s;"><i class="fa-solid fa-venus"></i></div>
-                <h3>Female Urology</h3>
-                <p>Expert care for female urinary tract issues, including incontinence, pelvic organ prolapse, and recurrent infections.</p>
+                <h3 data-i18n="services.s8Title">Female Urology</h3>
+                <p data-i18n="services.s8Desc">Expert care for female urinary tract issues, including incontinence, pelvic organ prolapse, and recurrent infections.</p>
             </div>
-            
+
             <div class="service-card card">
                 <div class="icon-circle float-anim" style="animation-delay: 0.4s;"><i class="fa-solid fa-hand-holding-heart"></i></div>
-                <h3>Renal Transplant</h3>
-                <p>Extensive experience and WHO Fellowship training in complex renal transplant procedures and comprehensive aftercare.</p>
+                <h3 data-i18n="services.s9Title">Renal Transplant</h3>
+                <p data-i18n="services.s9Desc">Extensive experience and WHO Fellowship training in complex renal transplant procedures and comprehensive aftercare.</p>
             </div>
 
             <div class="service-card card">
                 <div class="icon-circle float-anim"><i class="fa-solid fa-syringe"></i></div>
-                <h3>Nephrology Support & Vascular Access</h3>
-                <p>Integrated care for kidney patients, including dialysis support, biopsy, and AV fistula creation.</p>
+                <h3 data-i18n="services.s10Title">Nephrology Support & Vascular Access</h3>
+                <p data-i18n="services.s10Desc">Integrated care for kidney patients, including dialysis support, biopsy, and AV fistula creation.</p>
             </div>
         </div>
     </section>
 
     <section id="recognition" class="section-animate">
         <div class="section-header">
-            <h4 class="accent-text">RECOGNITION</h4>
-            <h2 class="section-title">Awards & Achievements</h2>
+            <h4 class="accent-text" data-i18n="recognition.eyebrow">RECOGNITION</h4>
+            <h2 class="section-title" data-i18n="recognition.title">Awards & Achievements</h2>
         </div>
-        
+
         <div class="services-grid">
-            
+
             <div class="card border-green">
                 <div class="award-img-container mb-20">
                     <img src="asirMem.jpeg" alt="Asir Memorial Gold Medal Award" class="award-img">
                 </div>
                 <div style="font-size: 2.5rem; color: #B8860B; margin-bottom: 15px;"><i class="fa-solid fa-trophy"></i></div>
                 <p class="text-green text-small mb-10">2023</p>
-                <h3>Asir Memorial Gold Medal Award</h3>
-                <p class="text-muted mt-10">The highest award in surgery in Bangladesh, awarded for outstanding contributions and the development of Laparoscopic Urology in the country.</p>
+                <h3 data-i18n="recognition.a1Title">Asir Memorial Gold Medal Award</h3>
+                <p class="text-muted mt-10" data-i18n="recognition.a1Desc">The highest award in surgery in Bangladesh, awarded for outstanding contributions and the development of Laparoscopic Urology in the country.</p>
             </div>
 
             <div class="card border-green">
@@ -388,8 +392,8 @@
                 </div>
                 <div style="font-size: 2.5rem; color: #B8860B; margin-bottom: 15px;"><i class="fa-solid fa-medal"></i></div>
                 <p class="text-green text-small mb-10">2016</p>
-                <h3>Major General Dr. Siraj Zinnat Golden Award</h3>
-                <p class="text-muted mt-10">Awarded by the Bangladesh Association of Urological Surgeon (BAUS) in recognition of outstanding achievements in urology.</p>
+                <h3 data-i18n="recognition.a2Title">Major General Dr. Siraj Zinnat Golden Award</h3>
+                <p class="text-muted mt-10" data-i18n="recognition.a2Desc">Awarded by the Bangladesh Association of Urological Surgeon (BAUS) in recognition of outstanding achievements in urology.</p>
             </div>
 
             <div class="card border-green">
@@ -402,9 +406,9 @@
                     </div>
                 </div>
                 <div style="font-size: 2.5rem; color: var(--accent-green); margin-bottom: 15px;"><i class="fa-solid fa-globe"></i></div>
-                <p class="text-green text-small mb-10">International Impact</p>
-                <h3>Global Guest Speaker</h3>
-                <p class="text-muted mt-10">Invited to deliver prestigious urological lectures and share expertise in countries like the UK, India, USA, Canada, and Singapore.</p>
+                <p class="text-green text-small mb-10" data-i18n="recognition.a3Label">International Impact</p>
+                <h3 data-i18n="recognition.a3Title">Global Guest Speaker</h3>
+                <p class="text-muted mt-10" data-i18n="recognition.a3Desc">Invited to deliver prestigious urological lectures and share expertise in countries like the UK, India, USA, Canada, and Singapore.</p>
             </div>
 
         </div>
@@ -413,37 +417,37 @@
     <!-- Patient Stories placeholder section -->
     <section id="testimonials" class="section-animate section-tint">
         <div class="section-header">
-            <h4 class="accent-text">PATIENT STORIES</h4>
-            <h2 class="section-title">What Patients Say</h2>
-            <p class="section-subtitle">Real experiences from the people we care for.</p>
+            <h4 class="accent-text" data-i18n="testimonials.eyebrow">PATIENT STORIES</h4>
+            <h2 class="section-title" data-i18n="testimonials.title">What Patients Say</h2>
+            <p class="section-subtitle" data-i18n="testimonials.subtitle">Real experiences from the people we care for.</p>
         </div>
-        
+
         <div class="testimonial-wrapper card text-center" style="display: flex; justify-content: center; align-items: center; min-height: 250px; padding: 40px;">
             <div class="avatar-icon float-anim" style="margin: 0 auto 20px;"><i class="fa-solid fa-comments"></i></div>
-            <h3 class="text-green" style="font-size: 1.5rem; margin-bottom: 10px;">Patient Stories Coming Soon</h3>
-            <p class="text-muted" style="max-width: 500px; margin: 0 auto;">Verified feedback, patient experiences, and success stories will be published shortly.</p>
+            <h3 class="text-green" style="font-size: 1.5rem; margin-bottom: 10px;" data-i18n="testimonials.comingSoon">Patient Stories Coming Soon</h3>
+            <p class="text-muted" style="max-width: 500px; margin: 0 auto;" data-i18n="testimonials.comingSoonDesc">Verified feedback, patient experiences, and success stories will be published shortly.</p>
         </div>
     </section>
 
     <!-- Contact section with location details and direct WhatsApp link -->
     <section id="contact" class="section-animate">
         <div class="section-header">
-            <h4 class="accent-text">GET IN TOUCH</h4>
-            <h2 class="section-title">Contact Information</h2>
+            <h4 class="accent-text" data-i18n="contact.eyebrow">GET IN TOUCH</h4>
+            <h2 class="section-title" data-i18n="contact.title">Contact Information</h2>
         </div>
         <div class="about-grid">
             <a href="https://share.google/EXoJzDGtnIUONxVuj" target="_blank" rel="noopener noreferrer" class="card text-center btn-outline" style="text-decoration: none; border-radius: 12px; padding: 40px 30px; display: block;">
                 <div class="icon-circle float-anim" style="margin: 0 auto 20px;"><i class="fa-solid fa-location-dot"></i></div>
-                <h3 class="text-white">Clinic Location</h3>
-                <p class="text-green mt-10" style="font-weight: 600;">Advanced Center Of Kidney & Urology</p>
-                <p class="text-muted text-small mt-10"><i class="fa-solid fa-arrow-up-right-from-square"></i> View on Google Maps</p>
+                <h3 class="text-white" data-i18n="contact.locationLabel">Clinic Location</h3>
+                <p class="text-green mt-10" style="font-weight: 600;" data-i18n="contact.clinicName">Advanced Center Of Kidney & Urology</p>
+                <p class="text-muted text-small mt-10"><i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="contact.viewMap">View on Google Maps</span></p>
             </a>
-            
+
             <a href="https://wa.me/8801409967330" target="_blank" rel="noopener noreferrer" class="card text-center btn-outline" style="text-decoration: none; border-radius: 12px; padding: 40px 30px; display: block;">
                 <div class="icon-circle float-anim" style="margin: 0 auto 20px; animation-delay: 0.5s;"><i class="fa-solid fa-calendar-check"></i></div>
-                <h3 class="text-white">Appointments</h3>
+                <h3 class="text-white" data-i18n="contact.appointmentsLabel">Appointments</h3>
                 <p class="text-green mt-10" style="font-weight: 600;">+880 1409 967330</p>
-                <p class="text-muted text-small mt-10"><i class="fa-brands fa-whatsapp"></i> Message on WhatsApp</p>
+                <p class="text-muted text-small mt-10"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="contact.whatsappMsg">Message on WhatsApp</span></p>
             </a>
         </div>
     </section>
@@ -454,43 +458,44 @@
                 <div class="logo">
                     <div class="logo-icon"><i class="fa-solid fa-user-doctor"></i></div>
                     <div class="logo-text">
-                        <strong>Prof. Md. Fazal Naser</strong>
-                        <span>Urologist</span>
+                        <strong data-i18n="brand.name">Prof. Md. Fazal Naser</strong>
+                        <span data-i18n="brand.title">Urologist</span>
                     </div>
                 </div>
-                <p class="footer-tagline">Professor of Urology &amp; Transplant Surgeon, providing tech-savvy urological care with compassion and minimal cost.</p>
+                <p class="footer-tagline" data-i18n="footer.tagline">Professor of Urology &amp; Transplant Surgeon, providing tech-savvy urological care with compassion and minimal cost.</p>
             </div>
 
             <div class="footer-col">
-                <h4>Quick Links</h4>
+                <h4 data-i18n="footer.quickLinks">Quick Links</h4>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#recognition">Recognition</a></li>
+                    <li><a href="#about" data-i18n="nav.about">About</a></li>
+                    <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                    <li><a href="#research" data-i18n="nav.research">Research</a></li>
+                    <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                    <li><a href="#recognition" data-i18n="nav.recognition">Recognition</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Get In Touch</h4>
+                <h4 data-i18n="footer.getInTouch">Get In Touch</h4>
                 <ul>
-                    <li><a href="https://share.google/EXoJzDGtnIUONxVuj" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> Advanced Center Of Kidney &amp; Urology</a></li>
+                    <li><a href="https://share.google/EXoJzDGtnIUONxVuj" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> <span data-i18n="contact.clinicName">Advanced Center Of Kidney &amp; Urology</span></a></li>
                     <li><a href="https://wa.me/8801409967330" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> +880 1409 967330</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Prof. Md. Fazal Naser. All rights reserved.</p>
+            <p><span data-i18n="footer.copyright">&copy; 2026 Prof. Md. Fazal Naser. All rights reserved.</span></p>
         </div>
     </footer>
 
     <!-- Floating WhatsApp appointment button -->
-    <a href="https://wa.me/8801409967330" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Book appointment on WhatsApp">
+    <a href="https://wa.me/8801409967330" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Book appointment on WhatsApp" data-i18n-aria="whatsapp.aria">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

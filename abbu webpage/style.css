@@ -51,6 +51,39 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
+/* ==================== LANGUAGE (EN / BN) ==================== */
+html[lang="bn"] body {
+    font-family: 'Noto Sans Bengali', 'Space Grotesk', sans-serif;
+}
+
+html[lang="bn"] h1,
+html[lang="bn"] h2,
+html[lang="bn"] h3,
+html[lang="bn"] .section-title,
+html[lang="bn"] .hero h1,
+html[lang="bn"] .logo-text strong,
+html[lang="bn"] .loader-name,
+html[lang="bn"] .service-card h3,
+html[lang="bn"] .footer-col h4,
+html[lang="bn"] .hero-badge-num {
+    font-family: 'Noto Serif Bengali', 'Fraunces', serif;
+}
+
+/* Bengali script doesn't take uppercase/tracking the way Latin does */
+html[lang="bn"] .accent-text,
+html[lang="bn"] .badge,
+html[lang="bn"] .logo-text span,
+html[lang="bn"] .loader-title,
+html[lang="bn"] .stat-item p,
+html[lang="bn"] .hero-badge-label,
+html[lang="bn"] .text-small,
+html[lang="bn"] .nav-links a,
+html[lang="bn"] .footer-tagline,
+html[lang="bn"] .btn {
+    text-transform: none;
+    letter-spacing: 0.2px;
+}
+
 /* ==================== UTILITY CLASSES ==================== */
 .text-center { text-align: center; }
 .text-green { color: var(--accent-green); transition: text-shadow 0.3s ease; }
@@ -123,6 +156,10 @@ nav::after {
     letter-spacing: 0.1px;
     color: var(--text-primary);
     line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 46vw;
 }
 
 .logo-text span {
@@ -182,6 +219,44 @@ nav::after {
     font-size: 0.85rem;
     flex-shrink: 0;
     margin-left: 28px;
+}
+
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    background: var(--border-light);
+    border-radius: 50px;
+    padding: 3px;
+    gap: 2px;
+    flex-shrink: 0;
+    margin-left: 14px;
+}
+
+.lang-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-family: 'Space Grotesk', 'Noto Sans Bengali', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 6px 13px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    line-height: 1;
+}
+
+.lang-btn:hover {
+    color: var(--accent-green);
+}
+
+.lang-btn.active {
+    background: var(--accent-green);
+    color: var(--text-on-accent);
+}
+
+.lang-btn.active:hover {
+    color: var(--text-on-accent);
 }
 
 /* ==================== LAYOUT ==================== */
@@ -1254,9 +1329,11 @@ body.sec-contact     .bg-section-glow { background: radial-gradient(ellipse 70% 
 @media (max-width: 768px) {
     nav { padding: 0 5%; height: 64px; }
 
-    .menu-toggle { display: flex; }
+    .menu-toggle { display: flex; order: 3; }
 
     .nav-cta { display: none; }
+
+    .lang-toggle { order: 2; margin-left: auto; margin-right: 10px; }
 
     .nav-links {
         position: absolute;
@@ -1336,8 +1413,10 @@ body.sec-contact     .bg-section-glow { background: radial-gradient(ellipse 70% 
     .social-buttons { flex-direction: column; align-items: stretch; }
     .btn { justify-content: center; text-align: center; font-size: 0.88rem; padding: 11px 20px; }
     nav { padding: 0 4%; }
-    .logo-text strong { font-size: 0.92rem; }
+    .logo-text strong { font-size: 0.92rem; max-width: 34vw; }
     .logo-text span { font-size: 0.68rem; }
+    .lang-toggle { margin-right: 6px; }
+    .lang-btn { padding: 5px 10px; font-size: 0.7rem; }
     .logo-icon { width: 36px; height: 36px; font-size: 1.1rem; }
     footer { padding: 40px 5% 0; }
 }
