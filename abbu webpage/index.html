@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prof. Md. Fazal Naser | Urologist</title>
+    <meta name="description" content="Official website of Prof. Md. Fazal Naser, Urologist. Learn about his expertise and book an appointment for consultations.">
+    <link rel="icon" type="image/png" href="kidneys-removebg-preview.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,10 +20,8 @@
         <div class="loader-icon"><i class="fa-solid fa-user-doctor"></i></div>
         <p class="loader-name" data-i18n="brand.name">Prof. Md. Fazal Naser</p>
         <p class="loader-title" data-i18n="brand.title">Urologist</p>
-        <!-- Self-drawing kidney outline -->
-        <svg class="loader-kidney" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 68" aria-hidden="true">
-            <path class="loader-kidney-path" d="M24,4 C38,4 46,15 46,32 C46,52 38,64 24,64 C15,64 8,57 5,47 C3,38 6,33 6,28 C6,23 3,16 6,10 C10,5 17,4 24,4Z"/>
-        </svg>
+        <!-- Kidney icon -->
+        <img class="loader-kidney" src="kidneys-removebg-preview.png" alt="" aria-hidden="true">
     </div>
 
     <!-- Medical-themed background animation -->
@@ -74,22 +74,6 @@
         <span class="med-cell" style="--x:68%; --d:14s; --t:20s; --s:24px;"></span>
         <span class="med-cell" style="--x:87%; --d:7s;  --t:24s; --s:32px;"></span>
 
-        <!-- Kidney outline strip — 8 seamlessly tiling kidney silhouettes -->
-        <div class="kidney-strip-wrapper">
-            <svg class="kidney-strip-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 80" preserveAspectRatio="none">
-                <defs>
-                    <path id="kidneyShape" d="M24,4 C38,4 46,15 46,32 C46,52 38,64 24,64 C15,64 8,57 5,47 C3,38 6,33 6,28 C6,23 3,16 6,10 C10,5 17,4 24,4Z"/>
-                </defs>
-                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(10,6) scale(0.9)"/>
-                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(310,6) scale(0.9)"/>
-                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(610,6) scale(0.9)"/>
-                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(910,6) scale(0.9)"/>
-                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(1210,6) scale(0.9)"/>
-                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(1510,6) scale(0.9)"/>
-                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(1810,6) scale(0.9)"/>
-                <use href="#kidneyShape" class="kidney-strip-path" transform="translate(2110,6) scale(0.9)"/>
-            </svg>
-        </div>
     </div>
 
     <nav>
@@ -139,6 +123,17 @@
             <div class="social-buttons text-reveal-5">
                 <a href="#contact" class="btn btn-primary pulse-anim"><i class="fa-solid fa-calendar-check"></i> <span data-i18n="nav.cta">Book Appointment</span></a>
                 <a href="#services" class="btn btn-outline"><span data-i18n="hero.viewServices">View Services</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="hero-meta text-reveal-5">
+                <div class="hero-meta-item">
+                    <span class="hero-meta-label" data-i18n="hero.metaLabel1">Practicing Since</span>
+                    <span class="hero-meta-value" data-i18n="hero.metaValue1">2003 — Dhaka, BD</span>
+                </div>
+                <div class="hero-meta-item">
+                    <span class="hero-meta-label" data-i18n="hero.metaLabel2">Currently At</span>
+                    <span class="hero-meta-value" data-i18n="hero.metaValue2">NIKDU · Kidney &amp; Urology</span>
+                </div>
             </div>
         </div>
 
@@ -198,64 +193,64 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
                     <h3 class="text-green" data-i18n="exp.role1">Professor of Urology</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org1">National Institute of Kidney Diseases & Urology (NIKDU)</p>
-                    <p class="text-muted text-small" data-i18n="exp.date1">21 Feb 2021 - Present</p>
+                    <p style="font-weight: 600; margin-bottom: 8px;" data-i18n="exp.org1">National Institute of Kidney Diseases & Urology (NIKDU)</p>
+                    <div class="meta-bar"><span data-i18n="exp.date1">21 Feb 2021 - Present</span></div>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
                     <h3 class="text-green" data-i18n="exp.role2">Associate Professor</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org2">Shaheed Suhrawardy Medical College</p>
-                    <p class="text-muted text-small" data-i18n="exp.date2">2017 - 2021</p>
+                    <p style="font-weight: 600; margin-bottom: 8px;" data-i18n="exp.org2">Shaheed Suhrawardy Medical College</p>
+                    <div class="meta-bar"><span data-i18n="exp.date2">2017 - 2021</span></div>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
                     <h3 class="text-green" data-i18n="exp.role3">Assistant Professor</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org3">Shaheed Suhrawardy Medical College</p>
-                    <p class="text-muted text-small" data-i18n="exp.date3">2011 - 2017</p>
+                    <p style="font-weight: 600; margin-bottom: 8px;" data-i18n="exp.org3">Shaheed Suhrawardy Medical College</p>
+                    <div class="meta-bar"><span data-i18n="exp.date3">2011 - 2017</span></div>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
                     <h3 class="text-green" data-i18n="exp.role4">WHO Fellow</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org4">India</p>
-                    <p class="text-muted text-small" data-i18n="exp.date4">2013</p>
+                    <p style="font-weight: 600; margin-bottom: 8px;" data-i18n="exp.org4">India</p>
+                    <div class="meta-bar"><span data-i18n="exp.date4">2013</span></div>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
                     <h3 class="text-green" data-i18n="exp.role5">Speciality Registrar, Urology</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org5">National Health Services (NHS), UK</p>
-                    <p class="text-muted text-small" data-i18n="exp.date5">2012 - 2013</p>
+                    <p style="font-weight: 600; margin-bottom: 8px;" data-i18n="exp.org5">National Health Services (NHS), UK</p>
+                    <div class="meta-bar"><span data-i18n="exp.date5">2012 - 2013</span></div>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
                     <h3 class="text-green" data-i18n="exp.role6">Medical Officer</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org6">Various Institutions</p>
-                    <p class="text-muted text-small" data-i18n="exp.date6">2008 - 2011</p>
+                    <p style="font-weight: 600; margin-bottom: 8px;" data-i18n="exp.org6">Various Institutions</p>
+                    <div class="meta-bar"><span data-i18n="exp.date6">2008 - 2011</span></div>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
                     <h3 class="text-green" data-i18n="exp.role7">Medical Officer</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org7">Mitford Hospital</p>
-                    <p class="text-muted text-small" data-i18n="exp.date7">2007</p>
+                    <p style="font-weight: 600; margin-bottom: 8px;" data-i18n="exp.org7">Mitford Hospital</p>
+                    <div class="meta-bar"><span data-i18n="exp.date7">2007</span></div>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content card">
                     <h3 class="text-green" data-i18n="exp.role8">Resident</h3>
-                    <p class="text-white" style="font-weight: 600; margin-bottom: 5px;" data-i18n="exp.org8">Bangladesh Medical University (BMU)</p>
-                    <p class="text-muted text-small" data-i18n="exp.date8">2003 - 2006</p>
+                    <p style="font-weight: 600; margin-bottom: 8px;" data-i18n="exp.org8">Bangladesh Medical University (BMU)</p>
+                    <div class="meta-bar"><span data-i18n="exp.date8">2003 - 2006</span></div>
                 </div>
             </div>
         </div>
@@ -376,27 +371,27 @@
 
         <div class="services-grid">
 
-            <div class="card border-green">
+            <div class="card card-feature">
                 <div class="award-img-container mb-20">
                     <img src="asirMem.jpeg" alt="Asir Memorial Gold Medal Award" class="award-img">
                 </div>
-                <div style="font-size: 2.5rem; color: #B8860B; margin-bottom: 15px;"><i class="fa-solid fa-trophy"></i></div>
-                <p class="text-green text-small mb-10">2023</p>
+                <div style="font-size: 2.5rem; color: #DDB13A; margin-bottom: 15px;"><i class="fa-solid fa-trophy"></i></div>
                 <h3 data-i18n="recognition.a1Title">Asir Memorial Gold Medal Award</h3>
                 <p class="text-muted mt-10" data-i18n="recognition.a1Desc">The highest award in surgery in Bangladesh, awarded for outstanding contributions and the development of Laparoscopic Urology in the country.</p>
+                <div class="meta-bar mt-10"><span>2023</span><span class="dot"></span><span data-i18n="recognition.a1Meta">Highest Surgical Honor</span></div>
             </div>
 
-            <div class="card border-green">
+            <div class="card card-feature">
                 <div class="award-img-container mb-20">
                     <img src="SiratJinnat.jpeg" alt="BAUS Golden Award" class="award-img">
                 </div>
-                <div style="font-size: 2.5rem; color: #B8860B; margin-bottom: 15px;"><i class="fa-solid fa-medal"></i></div>
-                <p class="text-green text-small mb-10">2016</p>
+                <div style="font-size: 2.5rem; color: #DDB13A; margin-bottom: 15px;"><i class="fa-solid fa-medal"></i></div>
                 <h3 data-i18n="recognition.a2Title">Major General Dr. Siraj Zinnat Golden Award</h3>
                 <p class="text-muted mt-10" data-i18n="recognition.a2Desc">Awarded by the Bangladesh Association of Urological Surgeon (BAUS) in recognition of outstanding achievements in urology.</p>
+                <div class="meta-bar mt-10"><span>2016</span><span class="dot"></span><span data-i18n="recognition.a2Meta">BAUS Recognition</span></div>
             </div>
 
-            <div class="card border-green">
+            <div class="card card-feature">
                 <div class="award-slider mb-20">
                     <div class="award-slider-track">
                         <img src="speaker/1.jpeg" alt="UK Lecture">
@@ -409,6 +404,7 @@
                 <p class="text-green text-small mb-10" data-i18n="recognition.a3Label">International Impact</p>
                 <h3 data-i18n="recognition.a3Title">Global Guest Speaker</h3>
                 <p class="text-muted mt-10" data-i18n="recognition.a3Desc">Invited to deliver prestigious urological lectures and share expertise in countries like the UK, India, USA, Canada, and Singapore.</p>
+                <div class="meta-bar mt-10" data-i18n="recognition.a3Meta">UK · India · USA · Canada · Singapore</div>
             </div>
 
         </div>
@@ -426,6 +422,21 @@
             <div class="avatar-icon float-anim" style="margin: 0 auto 20px;"><i class="fa-solid fa-comments"></i></div>
             <h3 class="text-green" style="font-size: 1.5rem; margin-bottom: 10px;" data-i18n="testimonials.comingSoon">Patient Stories Coming Soon</h3>
             <p class="text-muted" style="max-width: 500px; margin: 0 auto;" data-i18n="testimonials.comingSoonDesc">Verified feedback, patient experiences, and success stories will be published shortly.</p>
+        </div>
+    </section>
+
+    <!-- Bold editorial statement banner -->
+    <section class="section-animate">
+        <div class="cta-banner">
+            <div class="section-header">
+                <h4 class="accent-text" data-i18n="cta.eyebrow">TAKE THE NEXT STEP</h4>
+                <h2 class="section-title" data-i18n="cta.title">Your Kidney &amp; Urological Health Deserves Expert Care</h2>
+                <p class="section-subtitle" data-i18n="cta.subtitle">Book a consultation directly and get precise, compassionate treatment from a globally trained specialist.</p>
+            </div>
+            <div class="cta-links">
+                <a href="#contact" class="btn btn-primary pulse-anim"><i class="fa-solid fa-calendar-check"></i> <span data-i18n="nav.cta">Book Appointment</span></a>
+                <a href="#services" class="btn btn-outline-light"><span data-i18n="hero.viewServices">View Services</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
         </div>
     </section>
 
